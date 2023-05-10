@@ -28,11 +28,11 @@ export default function Home() {
     return (
         <>
             <div className="ais-InstantSearch">
-                <h1>Shopping</h1>
+                <h1></h1>
                 <InstantSearch indexName="dev_test" searchClient={searchClient}>
                     <div className="left-panel">
                         <ClearRefinements />
-                        <h2>Brands</h2>
+                        <h2>POST TYPES</h2>
                         <RefinementList attribute="postType.en" />
                         <Configure hitsPerPage={2} clickAnalytics />
                     </div>

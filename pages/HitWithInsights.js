@@ -1,6 +1,5 @@
 import { connectHitInsights } from "react-instantsearch-dom";
 import PropTypes from "prop-types";
-import React from "react";
 
 function Hit({ hit, insights }) {
 
@@ -17,7 +16,7 @@ function Hit({ hit, insights }) {
     return (
         <div
             onClick={() => {
-                insights("clickedObjectIDsAfterSearch", {
+                insights && insights("clickedObjectIDsAfterSearch", {
                     eventName: hit.objectID,
                     userToken: userToken,
                 });
