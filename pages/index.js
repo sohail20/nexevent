@@ -12,7 +12,7 @@ import {
     SearchBox,
 } from "react-instantsearch-dom";
 // import "../styles/Home.module.css";
-// import { HitWithInsights } from "./HitWithInsights";
+import HitWithInsights from "./HitWithInsights";
 // import { useState } from "react"
 // import BottomAppBar from '../component/BottomNavbar';
 // import HomePage from './HomePage';
@@ -42,7 +42,7 @@ export default function Home() {
                         }}>
                             <SearchBox />
                         </div>
-                        {/* <Hits hitComponent={HitWithInsights} /> */}
+                        <Hits hitComponent={HitWithInsights} />
                         <Pagination />
                     </div>
                 </InstantSearch>

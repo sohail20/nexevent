@@ -1,7 +1,6 @@
 // import { connectHitInsights } from "react-instantsearch-dom";
-// import PropTypes from "prop-types";
 
-// function Hit({ hit, insights }) {
+// export default function Hit({ hit, insights }) {
 
 //     let userToken;
 
@@ -51,9 +50,14 @@
 //     );
 // }
 
-// Hit.propTypes = {
-//     hit: PropTypes.object.isRequired,
-//     insights: PropTypes.func.isRequired,
-// };
 
-// export const HitWithInsights = connectHitInsights(typeof window !== "undefined" ? window.aa : "")(Hit);
+// // const HitWithInsights = connectHitInsights(typeof window !== "undefined" ? window.aa : "")(Hit);
+
+// // export default HitWithInsights
+
+
+export default function Hits(){
+    return (
+        <p>aksdhasdkj</p>
+    )
+}
