@@ -42,7 +42,7 @@ export default function Home() {
                         }}>
                             <SearchBox />
                         </div>
-                        <Hits hitComponent={HitWithInsights} />
+                        {/* <Hits hitComponent={HitWithInsights} /> */}
                         <Pagination />
                     </div>
                 </InstantSearch>

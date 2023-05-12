@@ -5,11 +5,16 @@ function Hit({ hit, insights }) {
 
     let userToken;
 
+    console.log("hithit", hit)
     if (typeof window !== "undefined") {
         setTimeout(() => {
             window && window.aa('getUserToken', null, (_, token) => {
                 userToken = token
             })
+
+            window && window.dataLayer && window.dataLayer.push({
+                algoliaUserToken: userToken,
+            });
         }, 3000)
     }
 
@@ -20,10 +25,14 @@ function Hit({ hit, insights }) {
                     eventName: hit.objectID,
                     userToken: userToken,
                 });
+                window.dataLayer.push({ event: 'Hits Viewed' });
             }}
             style={{
                 cursor: "pointer"
             }}
+            data-insights-object-id={`"${hit.objectID}"`}
+            data-insights-position={`"${hit.__position}"`}
+            data-insights-query-id={`"${hit.__queryID}"`}
         >
             <img
                 src={hit.heroImage.imageUrl}
