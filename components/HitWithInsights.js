@@ -29,7 +29,6 @@ function Hit({ hit, insights }) {
             eventName: hit.objectID,
             userToken: userToken,
           });
-        window.dataLayer.push({ event: 'Hits Viewed' });
       }}
       style={{
         cursor: 'pointer',
@@ -58,8 +57,8 @@ Hit.propTypes = {
   insights: PropTypes.func.isRequired,
 };
 
-const HitWithInsights = connectHitInsights(
-  typeof window !== 'undefined' ? window.aa : ''
-)(Hit);
+let HitWithInsights = connectHitInsights(
+  globalThis?.window?.aa
+)(Hit)
 
 export default HitWithInsights 
